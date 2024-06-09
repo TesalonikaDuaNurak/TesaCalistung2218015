@@ -63,6 +63,7 @@
 	   </div>
 	   <div class="profile-details">
 	      <span class="admin_name">CALISTUNG Admin</span>
+		
 	   </div>
 	</nav>
 	<div class="home-content">

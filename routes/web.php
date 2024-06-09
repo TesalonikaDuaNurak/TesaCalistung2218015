@@ -45,6 +45,7 @@ Route::get('/ubahpaket/{id_paket}', [PaketsController::class, 'ubahpaket'])->nam
 Route::post('/updatedata3/{id_paket}', [PaketsController::class, 'updatedata3'])->name('updatedata3');
 Route::get('/deletepaket/{id_paket}', [PaketsController::class, 'deletepaket'])->name('deletepaket');
 
+
 Route::get('/users', [UsersController::class, 'index'])->name('users');
 Route::get('/tambahuser', [UsersController::class, 'tambahuser'])->name('tambahuser');
 Route::post('/insertdata2', [UsersController::class, 'insertdata2'])->name('insertdata2');

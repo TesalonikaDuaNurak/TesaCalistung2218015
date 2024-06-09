@@ -61,6 +61,7 @@
       </div>
       <div class="profile-details">
         <span class="admin_name">CALISTUNG Admin</span>
+        <a href="eksporuser" class="btn btn-sm btn-primary">PRINT</a>
       </div>
     </nav>
     <div class="home-content">

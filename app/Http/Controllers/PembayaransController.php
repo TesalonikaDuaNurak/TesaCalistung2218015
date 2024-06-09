@@ -12,7 +12,7 @@ class PembayaransController extends Controller
     public function index()
     {
     	// mengambil data dari table pegawai
-        $pembayaran = Pembayaran::with('Paket')->get();
+        $pembayaran = Pembayaran::with(['Paket', 'User'])->get();
     	// mengirim data pegawai ke view index
     	return view('layout/pembayaran',compact('pembayaran'));
  
@@ -93,6 +93,8 @@ class PembayaransController extends Controller
     	return redirect()->route('pembayaran');
  
     }
+
+   
 
     
 }

@@ -5,7 +5,6 @@ use App\Models\Paket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-
 class PaketsController extends Controller
 {
     public function index()
@@ -72,6 +71,8 @@ class PaketsController extends Controller
     	return redirect()->route('paket');
  
     }
+
+   
 
    
 }
