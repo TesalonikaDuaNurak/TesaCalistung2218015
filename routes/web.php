@@ -37,6 +37,7 @@ Route::post('/insertdata', [PembayaransController::class, 'insertdata'])->name('
 Route::get('/ubahpembayaran/{id_pembayaran}', [PembayaransController::class, 'ubahpembayaran'])->name('ubahpembayaran');
 Route::post('/updatedata/{id_pembayaran}', [PembayaransController::class, 'updatedata'])->name('updatedata');
 Route::get('/deletepembayaran/{id_pembayaran}', [PembayaransController::class, 'deletepembayaran'])->name('deletepembayaran');
+Route::get('/eksporpembayaran', [PembayaranController::class, 'eksporpembayaran'])->name('eksporpembayaran');
 
 Route::get('/paket', [PaketsController::class, 'index'])->name('paket');
 Route::get('/tambahpaket', [PaketsController::class, 'tambahpaket'])->name('tambahpaket');
@@ -44,7 +45,7 @@ Route::post('/insertdata3', [PaketsController::class, 'insertdata3'])->name('ins
 Route::get('/ubahpaket/{id_paket}', [PaketsController::class, 'ubahpaket'])->name('ubahpaket');
 Route::post('/updatedata3/{id_paket}', [PaketsController::class, 'updatedata3'])->name('updatedata3');
 Route::get('/deletepaket/{id_paket}', [PaketsController::class, 'deletepaket'])->name('deletepaket');
-
+Route::get('/eksporpaket', [PaketsController::class, 'eksporpaket'])->name('eksporpaket');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users');
 Route::get('/tambahuser', [UsersController::class, 'tambahuser'])->name('tambahuser');
@@ -52,6 +53,7 @@ Route::post('/insertdata2', [UsersController::class, 'insertdata2'])->name('inse
 Route::get('/ubahuser/{id_user}', [UsersController::class, 'ubahuser'])->name('ubahuser');
 Route::post('/updatedata2/{id_user}', [UsersController::class, 'updatedata2'])->name('updatedata2');
 Route::get('/deleteuser/{id_user}', [UsersController::class, 'deleteuser'])->name('deleteuser');
+Route::get('/eksporuser', [UsersController::class, 'eksporuser'])->name('eksporuser');
 
 Route::get('/admins', [AdminsController::class, 'index'])->name('admins');
 Route::get('/tambahadmin', [AdminsController::class, 'tambahadmin'])->name('tambahadmin');

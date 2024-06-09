@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Paket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PDF;
 
 class PaketsController extends Controller
 {
@@ -72,7 +73,17 @@ class PaketsController extends Controller
  
     }
 
-   
+    public function eksporpaket()
+    {
+    	// mengambil data dari table pegawai
+        $paket = Paket::all();
+        view()->share('paket',$paket);
+        $pdf = PDF::loadview('layout/datapaket-pdf');
+        return $pdf->download('paket.pdf');
+    	// mengirim data pegawai ke view index
+    	
+ 
+    }
 
    
 }

@@ -68,7 +68,7 @@
 	</nav>
 	<div class="home-content">
 		<a href="tambahpaket" class="btn btn-sm btn-success">INPUT</a>
-		
+		<a href="eksporpaket" class="btn btn-sm btn-primary">PRINT</a>
 			<table class="table table-bordered">
             <thead>
     <tr>

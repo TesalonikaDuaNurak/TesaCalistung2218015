@@ -6,7 +6,7 @@ use App\Models\Users;
 use App\Models\Paket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use PDF;
 class PembayaransController extends Controller
 {
     public function index()
@@ -94,7 +94,17 @@ class PembayaransController extends Controller
  
     }
 
-   
+    public function eksporpembayaran()
+    {
+    	// mengambil data dari table pegawai
+        $pembayaran = Pembayaran::with(['Paket', 'User'])->get();
+        view()->share('pembayaran',$pembayaran);
+        $pdf = PDF::loadview('layout/datapembayaran-pdf');
+        return $pdf->download('pembayaran.pdf');
+    	// mengirim data pegawai ke view index
+    	
+ 
+    }
 
     
 }
